@@ -1,8 +1,17 @@
 
-FROM node:88
+# FROM node:88
+# WORKDIR /app
+# COPY package*.json ./
+# RUN npm install
+# COPY . .
+# EXPOSE 3000
+# CMD ["node","app.js"]
+
+FROM node
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
 CMD ["node","app.js"]
+
